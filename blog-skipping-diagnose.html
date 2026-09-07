@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About &middot; Alturatech</title>
-<meta name="description" content="A boutique product, AI, and GTM practice. Diagnose → Roadmap → Ship. Senior operators on every engagement, with a dedicated engineering team." />
+<title>The real cost of skipping the diagnose step &middot; Alturatech</title>
+<meta name="description" content="Founders often ask for a roadmap when the actual problem hasn't been named yet. Solving the wrong problem well is still the wrong problem." />
 <link rel="stylesheet" href="styles.css" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <script src="theme.js"></script>
@@ -31,11 +31,11 @@
       Alturatech
     </a>
     <ul class="nav-links">
-      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="team.html">Team</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="advisory.html">Advisory</a></li>
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
       <li class="mobile-cta"><a href="contact.html" class="nav-cta">Start a conversation &rarr;</a></li>
       <li class="nav-mobile-footer">
         <a href="mailto:alturatechai@gmail.com">alturatechai@gmail.com</a><br />
@@ -60,55 +60,44 @@
 </header>
 
 <main>
-
-  <section class="hero">
-    <div class="container">
-      <h1>About <span class="gradient-text">Alturatech</span></h1>
-      <p class="lede">Helping founders turn AI ambition into shipped product — not just strategy decks.</p>
-      <p style="color: var(--text-muted); max-width: 640px; margin: 0 auto; font-size: 1.05rem;">Alturatech is founder-led, not agency-run — every engagement gets senior judgment, not a rotating bench of associates. Product, AI, GTM, and growth are treated as one connected problem, not separate workstreams handed to separate teams. And when strategy needs to become software, our own engineering team builds it — no handoff, no black box.</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="grid grid-2">
-        <div class="card">
-          <div class="card-icon">&#128161;</div>
-          <h3>Why we started this</h3>
-          <p>We met while working together at Microsoft. Since then, we've each built, scaled, and advised businesses independently — inside big tech, inside startups, and as embedded advisors. Alturatech reunites that combined experience into a single boutique practice.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">&#127919;</div>
-          <h3>What we believe</h3>
-          <p>Most AI and growth work fails at the handoff — a recommendation nobody implements. The right agentic framework doesn't matter if no one ships it. A positioning workshop doesn't help if the pricing model can't hold it up. So we work hands-on with founders — and when the roadmap needs to become software, our engineering team ships it with you.</p>
-        </div>
+  <section class="hero" style="padding-bottom: 24px;">
+    <div class="article-wrap">
+      <a href="blog.html" class="back-link">&larr; Back to blog</a>
+      <h1 style="font-size: clamp(1.8rem, 4vw, 2.4rem); text-align: left;">The real cost of skipping the diagnose step</h1>
+      <div class="article-meta" style="text-align: left;">July 6, 2026 &middot; Alturatech</div>
+      <div class="article-hero-image">
+        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract scan rings illustration">
+          <rect width="400" height="250" fill="var(--bg-alt)" />
+          <circle cx="190" cy="125" r="28" fill="none" stroke="var(--border)" stroke-width="2" />
+          <circle cx="190" cy="125" r="52" fill="none" stroke="var(--border)" stroke-width="2" />
+          <circle cx="190" cy="125" r="76" fill="none" stroke="var(--border)" stroke-width="2" />
+          <line x1="190" y1="125" x2="190" y2="49" stroke="url(#gradDiagnoseHero)" stroke-width="3" stroke-linecap="round" />
+          <circle cx="190" cy="125" r="6" fill="url(#gradDiagnoseHero)" />
+          <circle cx="233" cy="97" r="7" fill="url(#gradDiagnoseHero)" />
+          <defs>
+            <linearGradient id="gradDiagnoseHero" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7c6bff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
     </div>
   </section>
 
-  <section class="band">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow-inline">How we work</span>
-        <h2>Diagnose &rarr; Roadmap &rarr; Ship</h2>
-      </div>
-      <div class="grid grid-3">
-        <div class="card">
-          <div class="card-icon">1</div>
-          <h3>Diagnose</h3>
-          <p>A short, focused engagement to understand the business, the team, and the product — before we quote a plan.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">2</div>
-          <h3>Roadmap</h3>
-          <p>A written roadmap, sequenced with owners and metrics, for how AI, product, GTM, or growth work will move the numbers you care about.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">3</div>
-          <h3>Ship</h3>
-          <p>Ongoing operating support, plus engineering execution when needed — from MVP builds to platform modernization, until the plan is running in production.</p>
-        </div>
-      </div>
+  <section style="padding-top: 0;">
+    <div class="article-wrap article-body">
+      <p>Most inbound requests arrive already shaped as a solution. "We need a growth strategy." "We need to hire a VP of Product." "We need to rebuild onboarding." Founders are usually right that something is broken — they're often wrong about which layer it's broken at, because the request was formed under time pressure by someone close enough to the problem to feel it but not far enough away to see its shape.</p>
+
+      <h2>Solving the wrong problem well is still wrong</h2>
+      <p>A "growth strategy" request is frequently a retention problem wearing a growth costume — new customers are arriving fine, but the bucket has a hole in it, and no amount of acquisition work fixes a leak. Executed well, a growth engagement in that situation still fails, not because the work was bad, but because it was aimed at a symptom instead of the mechanism producing it. The plan can be flawlessly delivered and the numbers still won't move.</p>
+      <p>This is the actual cost of skipping diagnosis: not wasted meetings, but a fully resourced, well-executed initiative that was never going to solve the thing keeping the founder up at night, because nobody stress-tested the initial framing against what the data actually showed.</p>
+
+      <h2>What diagnosis is actually for</h2>
+      <p>Diagnosis isn't a politeness step before getting to the "real" work — it's where the assumptions embedded in the original request get checked against evidence: usage data, churn cohorts, sales call notes, support tickets, whatever's available. Half the time the original request survives contact with the data intact. The other half, the engagement changes shape entirely before a single roadmap slide gets built, and that's diagnosis doing its job, not failing to move fast enough.</p>
+
+      <h2>Why this is cheap insurance</h2>
+      <p>A proper diagnosis takes days, not months. Weighed against a multi-quarter roadmap built on an unexamined assumption, it's the cheapest risk-reduction available in the entire engagement — and it's the one step most under pressure to be skipped, because it doesn't look like progress. Shipping something looks like progress. Confirming you're building the right something doesn't, until the alternative is watching a well-built roadmap fail to move the number it was supposed to move.</p>
     </div>
   </section>
 
@@ -122,7 +111,6 @@
       </div>
     </div>
   </section>
-
 </main>
 
 <footer class="site-footer">

@@ -3,9 +3,10 @@
   "configurations": [
     {
       "name": "alturatech-site",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "5173", "--directory", "/Users/bk/Documents/Website - Altura tech"],
-      "port": 5173
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "cd \"/Users/bk/Documents/Website - Altura tech\" && python3 -m http.server \"$PORT\""],
+      "port": 5173,
+      "autoPort": true
     }
   ]
 }

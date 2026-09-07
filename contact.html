@@ -3,24 +3,39 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact — Alturatech</title>
-<meta name="description" content="Start a conversation with Alturatech. Email alturatechai@gmail.com — Hyderabad, India (IST). Reply within 1–2 business days." />
+<title>Contact &middot; Alturatech</title>
+<meta name="description" content="Tell us where you are and we'll suggest the shape of the engagement. Response within 1–2 business days." />
 <link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<script src="theme.js"></script>
 </head>
 <body>
 
 <header class="site-header">
   <nav class="nav">
     <a href="index.html" class="brand">
-      <span class="brand-mark"></span>
+      <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradH" x1="0%" y1="0%" x2="100%" y2="60%">
+            <stop offset="0%" stop-color="#7c6bff" />
+            <stop offset="100%" stop-color="#22d3ee" />
+          </linearGradient>
+          <mask id="logoCutH">
+            <rect width="100" height="100" fill="#ffffff" />
+            <polygon points="50,16 14,86 86,86" fill="#000000" />
+            <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+          </mask>
+        </defs>
+        <circle cx="50" cy="50" r="48" fill="url(#logoGradH)" mask="url(#logoCutH)" />
+      </svg>
       Alturatech
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="team.html">Team</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="advisory.html">Advisory</a></li>
+      <li><a href="blog.html">Blog</a></li>
       <li class="mobile-cta"><a href="contact.html" class="nav-cta">Start a conversation &rarr;</a></li>
       <li class="nav-mobile-footer">
         <a href="mailto:alturatechai@gmail.com">alturatechai@gmail.com</a><br />
@@ -28,6 +43,16 @@
       </li>
     </ul>
     <div class="nav-right">
+      <div class="theme-switch">
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle color theme" aria-haspopup="true" aria-expanded="false">
+          <span class="theme-icon" aria-hidden="true">&#127769;</span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu">
+          <button type="button" class="theme-menu-item" data-theme-choice="light" role="menuitem">&#9728;&#65039; Light</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="dark" role="menuitem">&#127769; Dark</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="system" role="menuitem">&#128421;&#65039; System</button>
+        </div>
+      </div>
       <a href="contact.html" class="btn btn-primary nav-start-btn active">Start a conversation <span aria-hidden="true">&rarr;</span></a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
     </div>
@@ -38,9 +63,8 @@
 
   <section class="hero">
     <div class="container">
-      <span class="eyebrow">Contact</span>
-      <h1>Let's <span class="gradient-text">talk.</span></h1>
-      <p class="lede">A two-hour architecture review, a quarterly retainer, or embedded fractional leadership — tell us where you are and we'll suggest the shape of the engagement.</p>
+      <h1>Let's <span class="gradient-text">talk</span></h1>
+      <p class="lede">A two-hour architecture review, a quarterly retainer, or embedded fractional leadership — tell us where you are and we'll suggest the shape.</p>
     </div>
   </section>
 
@@ -86,6 +110,7 @@
 
         <div>
           <div class="form-card" id="contactFormWrap">
+            <h3 style="margin-top: 0;">Send a message</h3>
             <form id="contactForm" action="https://formsubmit.co/ajax/alturatechai@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="New inquiry from Alturatech website" />
               <input type="hidden" name="_captcha" value="false" />
@@ -109,7 +134,7 @@
 
           <div class="form-card success-card" id="successCard" style="display: none;">
             <div class="card-icon" style="margin: 0 auto 20px;">&#9989;</div>
-            <h3>Message received.</h3>
+            <h3>Message received</h3>
             <p class="success-body" style="color: var(--text-muted);"></p>
             <button type="button" id="sendAnotherBtn" class="btn btn-ghost" style="margin-top: 12px;">Send another message</button>
           </div>
@@ -126,19 +151,33 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand">
-          <span class="brand-mark"></span>
+          <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGradF" x1="0%" y1="0%" x2="100%" y2="60%">
+              <stop offset="0%" stop-color="#7c6bff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+            <mask id="logoCutF">
+              <rect width="100" height="100" fill="#ffffff" />
+              <polygon points="50,16 14,86 86,86" fill="#000000" />
+              <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+            </mask>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="url(#logoGradF)" mask="url(#logoCutF)" />
+        </svg>
           Alturatech
         </a>
         <p class="footer-tagline">Product, AI, GTM, and growth — with a dedicated engineering team available for hands-on execution.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 18px;">Start a conversation &rarr;</a>
       </div>
       <div class="footer-col">
-        <h4>Quick links</h4>
+        <h4>Practice</h4>
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="advisory.html">Advisory</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -150,8 +189,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2025 Alturatech. Built with intent, in Hyderabad.</div>
-      <div>0&rarr;1 &middot; 1&rarr;100 &middot; Product &middot; GTM &middot; AI</div>
+      <div>&copy; 2026 Alturatech. Built with intent, in Hyderabad.</div>
+      <div>Product &middot; AI &middot; GTM &middot; Growth</div>
     </div>
   </div>
 </footer>

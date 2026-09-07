@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What "agentic" actually means for a B2B SaaS roadmap &middot; Alturatech</title>
+<meta name="description" content="The word has become marketing filler. Here's the actual technical distinction that determines whether a feature belongs on this quarter's roadmap or next year's." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<script src="theme.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradH" x1="0%" y1="0%" x2="100%" y2="60%">
+            <stop offset="0%" stop-color="#7c6bff" />
+            <stop offset="100%" stop-color="#22d3ee" />
+          </linearGradient>
+          <mask id="logoCutH">
+            <rect width="100" height="100" fill="#ffffff" />
+            <polygon points="50,16 14,86 86,86" fill="#000000" />
+            <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+          </mask>
+        </defs>
+        <circle cx="50" cy="50" r="48" fill="url(#logoGradH)" mask="url(#logoCutH)" />
+      </svg>
+      Alturatech
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="advisory.html">Advisory</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li class="mobile-cta"><a href="contact.html" class="nav-cta">Start a conversation &rarr;</a></li>
+      <li class="nav-mobile-footer">
+        <a href="mailto:alturatechai@gmail.com">alturatechai@gmail.com</a><br />
+        Hyderabad, India (IST)
+      </li>
+    </ul>
+    <div class="nav-right">
+      <div class="theme-switch">
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle color theme" aria-haspopup="true" aria-expanded="false">
+          <span class="theme-icon" aria-hidden="true">&#127769;</span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu">
+          <button type="button" class="theme-menu-item" data-theme-choice="light" role="menuitem">&#9728;&#65039; Light</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="dark" role="menuitem">&#127769; Dark</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="system" role="menuitem">&#128421;&#65039; System</button>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary nav-start-btn">Start a conversation <span aria-hidden="true">&rarr;</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom: 24px;">
+    <div class="article-wrap">
+      <a href="blog.html" class="back-link">&larr; Back to blog</a>
+      <h1 style="font-size: clamp(1.8rem, 4vw, 2.4rem); text-align: left;">What "agentic" actually means for a B2B SaaS roadmap</h1>
+      <div class="article-meta" style="text-align: left;">August 3, 2026 &middot; Alturatech</div>
+      <div class="article-hero-image">
+        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract network graph illustration">
+          <rect width="400" height="250" fill="var(--bg-alt)" />
+          <circle cx="200" cy="125" r="130" fill="url(#gradAgenticHero)" opacity="0.08" />
+          <g stroke="var(--border)" stroke-width="1.5">
+            <line x1="90" y1="65" x2="200" y2="125" />
+            <line x1="58" y1="150" x2="200" y2="125" />
+            <line x1="150" y1="195" x2="200" y2="125" />
+            <line x1="200" y1="125" x2="292" y2="75" />
+            <line x1="200" y1="125" x2="315" y2="155" />
+            <line x1="200" y1="125" x2="250" y2="205" />
+          </g>
+          <circle cx="90" cy="65" r="6" fill="var(--text-faint)" />
+          <circle cx="58" cy="150" r="5" fill="var(--text-faint)" />
+          <circle cx="150" cy="195" r="6" fill="var(--text-faint)" />
+          <circle cx="292" cy="75" r="5" fill="var(--text-faint)" />
+          <circle cx="315" cy="155" r="6" fill="var(--text-faint)" />
+          <circle cx="250" cy="205" r="5" fill="var(--text-faint)" />
+          <circle cx="200" cy="125" r="13" fill="url(#gradAgenticHero)" />
+          <defs>
+            <linearGradient id="gradAgenticHero" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7c6bff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="article-wrap article-body">
+      <p>"Agentic" has become the word every roadmap deck reaches for when it wants to sound current. Almost none of what gets labeled that way is actually agentic. Most of it is a chatbot wired to an existing workflow, or a rules engine with an LLM doing the classification step. That's not a criticism — automation is often the right call. But it's a different build, a different timeline, and a different set of failure modes than an actual agent, and conflating the two is how roadmaps end up with the wrong estimate next to the wrong line item.</p>
+
+      <h2>The actual distinction</h2>
+      <p>The test we use with clients is simple: does the system decide what to do next, or does it just execute a step a human already decided on? A workflow automation follows a fixed sequence — trigger, classify, act. An agent plans a sequence dynamically, chooses between tools, and adjusts when a step fails or returns something unexpected. If your "agent" always does the same five steps in the same order, it's automation with better branding.</p>
+      <p>Neither is better in the abstract. Automation is cheaper, more predictable, and easier to debug at 2am. Agentic systems are worth the added complexity when the task genuinely has too much variance for a fixed sequence to hold up — support triage across dozens of edge cases, multi-step research where the next step depends on what the last one found, or orchestration across several internal tools where the right order isn't known in advance.</p>
+
+      <h2>Where roadmaps go wrong</h2>
+      <p>The recurring mistake is bolting an agent onto a feature that was designed for a human, instead of redesigning the workflow around what autonomy actually changes. If the underlying process still assumes a person reviews every output before it matters, you haven't built an agentic feature — you've built a slower version of the manual process with an LLM in the loop. The teams that get real value from agentic work usually end up rethinking the surrounding process, not just inserting a model into the existing one.</p>
+
+      <h2>How to sequence it</h2>
+      <p>The sequencing question isn't caution for its own sake — it's about how much blast radius you're willing to grant before you've actually watched the thing fail. We define stages by what the system is allowed to touch and how closely a human is still watching, not by an arbitrary maturity label:</p>
+      <ul>
+        <li><strong>Single tool, supervised.</strong> One narrow task, one tool, a human reviews every output before it ships. This stage exists to answer exactly one question: is the model reliable enough for this domain at all?</li>
+        <li><strong>Multiple tools, supervised.</strong> The agent is now choosing between tools and sequencing steps itself, but a human still checks the work before it goes out. This is where the real failure modes surface — the ones that only appear once there's branching to get wrong.</li>
+        <li><strong>Autonomous, exception-based review.</strong> The agent runs end to end; a human looks only at outputs flagged as unusual. Most teams never need to get here, and that's fine — a lot of durable value sits in the stage before it.</li>
+      </ul>
+      <p>The mistake we see most often on roadmaps is committing to full autonomy in the first quarter because the demo looked convincing. A demo has an audience of one and no adversarial data. Production doesn't work that way.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <span class="eyebrow-inline">Ready when you are</span>
+        <h2>Start a conversation</h2>
+        <p>A two-hour architecture review, a quarterly retainer, or embedded fractional leadership — tell us where you are and we'll suggest the shape.</p>
+        <a href="contact.html" class="btn btn-primary">Start a conversation &rarr;</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGradF" x1="0%" y1="0%" x2="100%" y2="60%">
+              <stop offset="0%" stop-color="#7c6bff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+            <mask id="logoCutF">
+              <rect width="100" height="100" fill="#ffffff" />
+              <polygon points="50,16 14,86 86,86" fill="#000000" />
+              <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+            </mask>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="url(#logoGradF)" mask="url(#logoCutF)" />
+        </svg>
+          Alturatech
+        </a>
+        <p class="footer-tagline">Product, AI, GTM, and growth — with a dedicated engineering team available for hands-on execution.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 18px;">Start a conversation &rarr;</a>
+      </div>
+      <div class="footer-col">
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="advisory.html">Advisory</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:alturatechai@gmail.com">alturatechai@gmail.com</a></li>
+          <li><p>Hyderabad, India (IST) &middot; Response 1&ndash;2 business days</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Alturatech. Built with intent, in Hyderabad.</div>
+      <div>Product &middot; AI &middot; GTM &middot; Growth</div>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

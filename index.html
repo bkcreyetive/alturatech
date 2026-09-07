@@ -4,23 +4,38 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Alturatech — Product, AI & GTM. Built to ship.</title>
-<meta name="description" content="Product, AI, GTM, and growth — with a dedicated engineering team. 0→1 to 1→100 for B2B SaaS, B2C, and agentic AI companies." />
+<meta name="description" content="Product, AI, GTM, and growth — with a dedicated engineering team. From new product development to scale-stage growth, for B2B SaaS, B2C, and agentic AI companies." />
 <link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<script src="theme.js"></script>
 </head>
 <body>
 
 <header class="site-header">
   <nav class="nav">
     <a href="index.html" class="brand">
-      <span class="brand-mark"></span>
+      <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradH" x1="0%" y1="0%" x2="100%" y2="60%">
+            <stop offset="0%" stop-color="#7c6bff" />
+            <stop offset="100%" stop-color="#22d3ee" />
+          </linearGradient>
+          <mask id="logoCutH">
+            <rect width="100" height="100" fill="#ffffff" />
+            <polygon points="50,16 14,86 86,86" fill="#000000" />
+            <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+          </mask>
+        </defs>
+        <circle cx="50" cy="50" r="48" fill="url(#logoGradH)" mask="url(#logoCutH)" />
+      </svg>
       Alturatech
     </a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="team.html">Team</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="advisory.html">Advisory</a></li>
+      <li><a href="blog.html">Blog</a></li>
       <li class="mobile-cta"><a href="contact.html" class="nav-cta">Start a conversation &rarr;</a></li>
       <li class="nav-mobile-footer">
         <a href="mailto:alturatechai@gmail.com">alturatechai@gmail.com</a><br />
@@ -28,6 +43,16 @@
       </li>
     </ul>
     <div class="nav-right">
+      <div class="theme-switch">
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle color theme" aria-haspopup="true" aria-expanded="false">
+          <span class="theme-icon" aria-hidden="true">&#127769;</span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu">
+          <button type="button" class="theme-menu-item" data-theme-choice="light" role="menuitem">&#9728;&#65039; Light</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="dark" role="menuitem">&#127769; Dark</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="system" role="menuitem">&#128421;&#65039; System</button>
+        </div>
+      </div>
       <a href="contact.html" class="btn btn-primary nav-start-btn">Start a conversation <span aria-hidden="true">&rarr;</span></a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
     </div>
@@ -40,15 +65,15 @@
     <div class="container hero-split">
       <div class="hero-copy">
         <span class="eyebrow">Product &middot; AI &middot; GTM &middot; Growth</span>
-        <h1>Product &amp; AI leadership,<br /><span class="gradient-text">built to ship.</span></h1>
-        <p class="lede">Two decades of operating experience, applied hands-on — product strategy, GTM, and execution for B2B SaaS, B2C, and agentic AI companies, from first prototype to market leader.</p>
+        <h1>Product &amp; AI leadership,<br /><span class="gradient-text">built to ship</span></h1>
+        <p class="lede">Decades of operating experience, applied hands-on — product strategy, GTM, and execution for B2B SaaS, B2C, and agentic AI companies, from first prototype to market leader.</p>
         <div class="hero-actions">
           <a href="contact.html" class="btn btn-primary">Start a conversation &rarr;</a>
           <a href="services.html" class="btn btn-ghost">Explore services &rarr;</a>
         </div>
         <div class="chip-strip">
-          <span class="chip">0&rarr;1 Products</span>
-          <span class="chip">1&rarr;100 Scale</span>
+          <span class="chip">New Product Development</span>
+          <span class="chip">Scale-Stage Growth</span>
           <span class="chip">Product Strategy</span>
           <span class="chip">Execution</span>
           <span class="chip">GTM</span>
@@ -57,37 +82,38 @@
           <span class="chip">AI-Native Products</span>
           <span class="chip">Agentic Frameworks</span>
         </div>
+        <div class="scroll-hint">Scroll to explore <span aria-hidden="true">&darr;</span></div>
       </div>
 
       <div class="bento-card">
         <div class="bento-head">
           <strong>By the numbers</strong>
-          <span>Recent &middot; Verifiable</span>
+          <span>Track record &middot; Across two decades</span>
         </div>
         <div class="bento-grid">
           <div class="bento-stat">
             <div class="stat-icon">&#128640;</div>
-            <span class="stat-num">5+</span>
-            <div class="stat-label">Multi-M ARR products shipped</div>
-            <div class="stat-sub">Live in production today</div>
+            <span class="stat-num">20+</span>
+            <div class="stat-label">Products shipped</div>
+            <div class="stat-sub">Microsoft &middot; Amazon &middot; Zenoti &middot; Evergent &middot; Magnify</div>
           </div>
           <div class="bento-stat">
             <div class="stat-icon">&#128200;</div>
-            <span class="stat-num">$8M+</span>
-            <div class="stat-label">Documented P&amp;L impact</div>
-            <div class="stat-sub">From programs we owned</div>
+            <span class="stat-num">$100M+</span>
+            <div class="stat-label">ARR under management</div>
+            <div class="stat-sub">Portfolios owned &amp; operated</div>
           </div>
           <div class="bento-stat">
             <div class="stat-icon">&#129309;</div>
-            <span class="stat-num">3</span>
-            <div class="stat-label">AI startups advised in 2025</div>
-            <div class="stat-sub">Active engagements</div>
+            <span class="stat-num">9+</span>
+            <div class="stat-label">Companies advised</div>
+            <div class="stat-sub">GenAI &middot; SaaS &middot; consumer tech</div>
           </div>
           <div class="bento-stat">
             <div class="stat-icon">&#128101;</div>
-            <span class="stat-num">10+</span>
-            <div class="stat-label">Angel portfolio companies</div>
-            <div class="stat-sub">Founder-first bets</div>
+            <span class="stat-num">2</span>
+            <div class="stat-label">Alturatech investments</div>
+            <div class="stat-sub">Pulse &middot; Zwende</div>
           </div>
         </div>
         <div class="bento-footer">Taking on 2 new engagements this quarter</div>
@@ -113,7 +139,7 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow-inline">What we do</span>
-        <h2>Six areas of focus, one team.</h2>
+        <h2>Six areas of focus, one team</h2>
         <p>Product, AI, GTM, and growth — with a dedicated engineering team available for hands-on execution.</p>
       </div>
       <div class="grid grid-3">
@@ -156,91 +182,60 @@
 
   <div class="marquee">
     <div class="marquee-track">
-      <span>AI Strategy</span><span>Agentic Systems</span><span>Go-To-Market</span><span>Product Leadership</span><span>Tech Advisory</span><span>Growth Loops</span><span>0-to-1</span><span>Fractional CPO</span><span>Platform Strategy</span><span>Startup Advising</span>
-      <span>AI Strategy</span><span>Agentic Systems</span><span>Go-To-Market</span><span>Product Leadership</span><span>Tech Advisory</span><span>Growth Loops</span><span>0-to-1</span><span>Fractional CPO</span><span>Platform Strategy</span><span>Startup Advising</span>
+      <span>AI Strategy</span><span>Agentic Systems</span><span>Go-To-Market</span><span>Product Leadership</span><span>Tech Advisory</span><span>Growth Loops</span><span>Product Development</span><span>Fractional CPO</span><span>Platform Strategy</span><span>Startup Advising</span>
+      <span>AI Strategy</span><span>Agentic Systems</span><span>Go-To-Market</span><span>Product Leadership</span><span>Tech Advisory</span><span>Growth Loops</span><span>Product Development</span><span>Fractional CPO</span><span>Platform Strategy</span><span>Startup Advising</span>
     </div>
   </div>
 
   <section class="band">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow-inline">Engagements</span>
-        <h2>Recent programs.</h2>
-        <p>Engagements led at scale — across enterprise AI platforms, growth-stage B2B SaaS, and venture-backed startups.</p>
+        <span class="eyebrow-inline">Track record &middot; Across two decades</span>
+        <h2>Two decades, in numbers</h2>
       </div>
-
-      <div class="engagement-list">
-        <div class="engagement-row">
-          <div>
-            <div class="engagement-index">01</div>
-            <div class="engagement-label">Evergent</div>
-            <div class="engagement-role">Chief AI &amp; Product Officer</div>
-          </div>
-          <div>
-            <h3 class="engagement-headline">Turning a subscription-billing platform into an AI-native revenue OS.</h3>
-            <p class="engagement-body">Leading the platform's transition from a rules-based billing engine into an autonomous, agent-driven revenue operating system for global media and telco customers.</p>
-          </div>
+      <div class="metrics-row">
+        <div class="metric-item">
+          <span class="metric-num">20+</span>
+          <p>Products shipped across Microsoft, Amazon, Zenoti, Evergent &amp; Magnify</p>
         </div>
-        <div class="engagement-row">
-          <div>
-            <div class="engagement-index">02</div>
-            <div class="engagement-label">Zenoti</div>
-            <div class="engagement-role">Head of Product</div>
-          </div>
-          <div>
-            <h3 class="engagement-headline">AI agents that convert, nurture, and retain — inside a category-leading SaaS.</h3>
-            <p class="engagement-body">Owned the product line responsible for revenue growth in health &amp; wellness — shifting from workflow software to AI-first customer engagement across acquisition, engagement, and retention.</p>
-          </div>
+        <div class="metric-item">
+          <span class="metric-num">$100M+</span>
+          <p>ARR under management across portfolios owned and operated</p>
         </div>
-        <div class="engagement-row">
-          <div>
-            <div class="engagement-index">03</div>
-            <div class="engagement-label">Microsoft Office</div>
-            <div class="engagement-role">Principal Product Manager</div>
-          </div>
-          <div>
-            <h3 class="engagement-headline">AI Copilot creation workflows behind Microsoft Create and OneDrive.</h3>
-            <p class="engagement-body">Shaped the AI product experience that lets millions of users generate documents, decks, and media assets with a Copilot inside the Office Product Group.</p>
-          </div>
+        <div class="metric-item">
+          <span class="metric-num">9+</span>
+          <p>Companies advised across GenAI, SaaS and consumer tech</p>
         </div>
-        <div class="engagement-row">
-          <div>
-            <div class="engagement-index">04</div>
-            <div class="engagement-label">Microsoft Azure</div>
-            <div class="engagement-role">Program Lead</div>
-          </div>
-          <div>
-            <h3 class="engagement-headline">$3M/year saved by rebuilding a global supply chain on Azure.</h3>
-            <p class="engagement-body">Owned the end-to-end rebuild of Microsoft's global reverse-logistics platform onto Azure — with measurable, sustained annual savings.</p>
-          </div>
-        </div>
-        <div class="engagement-row">
-          <div>
-            <div class="engagement-index">05</div>
-            <div class="engagement-label">Magnify</div>
-            <div class="engagement-role">Head of Product</div>
-          </div>
-          <div>
-            <h3 class="engagement-headline">Product leadership at a venture-backed AI-for-customer-success startup.</h3>
-            <p class="engagement-body">Led product from early stage inside a Madrona Ventures and Decibel Partners-backed company building AI for customer success.</p>
-          </div>
-        </div>
-        <div class="engagement-row">
-          <div>
-            <div class="engagement-index">06</div>
-            <div class="engagement-label">Factorial Advisors</div>
-            <div class="engagement-role">Founder &amp; Managing Partner</div>
-          </div>
-          <div>
-            <h3 class="engagement-headline">Embedded operating support for venture- and PE-backed AI companies.</h3>
-            <p class="engagement-body">A fractional advisory practice working with GenAI, SaaS, and consumer tech founders on product-market fit, GTM pivots, and CX-led growth.</p>
-          </div>
+        <div class="metric-item">
+          <span class="metric-num">2</span>
+          <p>Alturatech investments — Pulse and Zwende</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="hero-actions" style="margin-top: 40px; justify-content: center;">
-        <a href="testimonials.html" class="btn btn-ghost">See selected work &rarr;</a>
-        <a href="services.html" class="btn btn-ghost">Explore services &rarr;</a>
+  <section>
+    <div class="container">
+      <div class="section-head" style="text-align: left; margin: 0 0 32px; max-width: none; display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <span class="eyebrow-inline">Selected advisory</span>
+          <h2 style="margin-bottom: 0;">Founders we've worked with recently</h2>
+        </div>
+        <a href="advisory.html" class="btn btn-ghost">View all advisory &rarr;</a>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Zluri</h3>
+          <p>SaaS Management &middot; Product strategy &amp; growth</p>
+        </div>
+        <div class="card">
+          <h3>Scrut Automation</h3>
+          <p>Compliance &amp; Security &middot; Product-led motion</p>
+        </div>
+        <div class="card">
+          <h3>InterfaceAI</h3>
+          <p>Banking AI &middot; AI product roadmap</p>
+        </div>
       </div>
     </div>
   </section>
@@ -248,12 +243,10 @@
   <section>
     <div class="container">
       <div class="cta-band">
-        <h2>Let's build.</h2>
-        <p>Whether it's a two-hour architecture review or a multi-quarter embedded engagement, we tailor the work to the stage you're at.</p>
-        <div class="hero-actions" style="justify-content: center;">
-          <a href="contact.html" class="btn btn-primary">Start a conversation &rarr;</a>
-          <a href="services.html" class="btn btn-ghost">See services &#10022;</a>
-        </div>
+        <span class="eyebrow-inline">Ready when you are</span>
+        <h2>Start a conversation</h2>
+        <p>A two-hour architecture review, a quarterly retainer, or embedded fractional leadership — tell us where you are and we'll suggest the shape.</p>
+        <a href="contact.html" class="btn btn-primary">Start a conversation &rarr;</a>
       </div>
     </div>
   </section>
@@ -265,19 +258,33 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand">
-          <span class="brand-mark"></span>
+          <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGradF" x1="0%" y1="0%" x2="100%" y2="60%">
+              <stop offset="0%" stop-color="#7c6bff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+            <mask id="logoCutF">
+              <rect width="100" height="100" fill="#ffffff" />
+              <polygon points="50,16 14,86 86,86" fill="#000000" />
+              <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+            </mask>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="url(#logoGradF)" mask="url(#logoCutF)" />
+        </svg>
           Alturatech
         </a>
         <p class="footer-tagline">Product, AI, GTM, and growth — with a dedicated engineering team available for hands-on execution.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 18px;">Start a conversation &rarr;</a>
       </div>
       <div class="footer-col">
-        <h4>Quick links</h4>
+        <h4>Practice</h4>
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="advisory.html">Advisory</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -289,8 +296,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2025 Alturatech. Built with intent, in Hyderabad.</div>
-      <div>0&rarr;1 &middot; 1&rarr;100 &middot; Product &middot; GTM &middot; AI</div>
+      <div>&copy; 2026 Alturatech. Built with intent, in Hyderabad.</div>
+      <div>Product &middot; AI &middot; GTM &middot; Growth</div>
     </div>
   </div>
 </footer>

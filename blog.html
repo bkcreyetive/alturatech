@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog &middot; Alturatech</title>
+<meta name="description" content="Notes on AI, product, GTM, and growth from the Alturatech founders — new posts every two weeks." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<script src="theme.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradH" x1="0%" y1="0%" x2="100%" y2="60%">
+            <stop offset="0%" stop-color="#7c6bff" />
+            <stop offset="100%" stop-color="#22d3ee" />
+          </linearGradient>
+          <mask id="logoCutH">
+            <rect width="100" height="100" fill="#ffffff" />
+            <polygon points="50,16 14,86 86,86" fill="#000000" />
+            <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+          </mask>
+        </defs>
+        <circle cx="50" cy="50" r="48" fill="url(#logoGradH)" mask="url(#logoCutH)" />
+      </svg>
+      Alturatech
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="advisory.html">Advisory</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li class="mobile-cta"><a href="contact.html" class="nav-cta">Start a conversation &rarr;</a></li>
+      <li class="nav-mobile-footer">
+        <a href="mailto:alturatechai@gmail.com">alturatechai@gmail.com</a><br />
+        Hyderabad, India (IST)
+      </li>
+    </ul>
+    <div class="nav-right">
+      <div class="theme-switch">
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle color theme" aria-haspopup="true" aria-expanded="false">
+          <span class="theme-icon" aria-hidden="true">&#127769;</span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu">
+          <button type="button" class="theme-menu-item" data-theme-choice="light" role="menuitem">&#9728;&#65039; Light</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="dark" role="menuitem">&#127769; Dark</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="system" role="menuitem">&#128421;&#65039; System</button>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary nav-start-btn">Start a conversation <span aria-hidden="true">&rarr;</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <h1><span class="gradient-text">Blog</span></h1>
+      <p class="lede">Notes on AI, product, GTM, and growth — what we're seeing across engagements, written up every couple of weeks.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="blog-list">
+
+        <a href="blog-agentic-cost-roi.html" class="blog-card">
+          <div class="blog-card-image">
+            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract cost bars exceeding a baseline illustration">
+              <rect width="400" height="250" fill="var(--bg-alt)" />
+              <line x1="40" y1="190" x2="360" y2="190" stroke="var(--border)" stroke-width="1" />
+              <line x1="40" y1="150" x2="360" y2="150" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="4 6" />
+              <rect x="60" y="165" width="24" height="25" rx="3" fill="var(--text-faint)" />
+              <rect x="105" y="140" width="24" height="50" rx="3" fill="var(--text-faint)" />
+              <rect x="150" y="110" width="24" height="80" rx="3" fill="url(#gradCostList)" />
+              <rect x="195" y="90" width="24" height="100" rx="3" fill="url(#gradCostList)" />
+              <rect x="240" y="60" width="24" height="130" rx="3" fill="url(#gradCostList)" />
+              <rect x="285" y="75" width="24" height="115" rx="3" fill="url(#gradCostList)" />
+              <circle cx="252" cy="55" r="7" fill="url(#gradCostList)" />
+              <defs>
+                <linearGradient id="gradCostList" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#22d3ee" />
+                  <stop offset="100%" stop-color="#7c6bff" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-card-date">August 10, 2026</span>
+            <h3>Why your agent's token bill doesn't match your ROI story</h3>
+            <p>Token consumption doesn't scale the way a pilot demo suggests, and most clients have no way to translate a token count into what they're actually paying for.</p>
+          </div>
+        </a>
+
+        <a href="blog-agentic-roadmap.html" class="blog-card">
+          <div class="blog-card-image">
+            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract network graph illustration">
+              <rect width="400" height="250" fill="var(--bg-alt)" />
+              <circle cx="200" cy="125" r="130" fill="url(#gradAgentic)" opacity="0.08" />
+              <g stroke="var(--border)" stroke-width="1.5">
+                <line x1="90" y1="65" x2="200" y2="125" />
+                <line x1="58" y1="150" x2="200" y2="125" />
+                <line x1="150" y1="195" x2="200" y2="125" />
+                <line x1="200" y1="125" x2="292" y2="75" />
+                <line x1="200" y1="125" x2="315" y2="155" />
+                <line x1="200" y1="125" x2="250" y2="205" />
+              </g>
+              <circle cx="90" cy="65" r="6" fill="var(--text-faint)" />
+              <circle cx="58" cy="150" r="5" fill="var(--text-faint)" />
+              <circle cx="150" cy="195" r="6" fill="var(--text-faint)" />
+              <circle cx="292" cy="75" r="5" fill="var(--text-faint)" />
+              <circle cx="315" cy="155" r="6" fill="var(--text-faint)" />
+              <circle cx="250" cy="205" r="5" fill="var(--text-faint)" />
+              <circle cx="200" cy="125" r="13" fill="url(#gradAgentic)" />
+              <defs>
+                <linearGradient id="gradAgentic" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#7c6bff" />
+                  <stop offset="100%" stop-color="#22d3ee" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-card-date">August 3, 2026</span>
+            <h3>What "agentic" actually means for a B2B SaaS roadmap</h3>
+            <p>The word has become marketing filler. Here's the actual technical distinction that determines whether a feature belongs on this quarter's roadmap or next year's.</p>
+          </div>
+        </a>
+
+        <a href="blog-gtm-pivots-90-days.html" class="blog-card">
+          <div class="blog-card-image">
+            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract diverging path illustration">
+              <rect width="400" height="250" fill="var(--bg-alt)" />
+              <path d="M35,185 C110,185 135,145 178,127" stroke="var(--border)" stroke-width="3" fill="none" stroke-linecap="round" />
+              <path d="M178,127 C225,108 255,62 340,50" stroke="var(--border)" stroke-width="3" fill="none" stroke-dasharray="5 9" stroke-linecap="round" />
+              <path d="M178,127 C228,150 275,172 350,190" stroke="url(#gradGtm)" stroke-width="4" fill="none" stroke-linecap="round" />
+              <circle cx="178" cy="127" r="7" fill="var(--text-faint)" />
+              <circle cx="350" cy="190" r="9" fill="url(#gradGtm)" />
+              <defs>
+                <linearGradient id="gradGtm" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#7c6bff" />
+                  <stop offset="100%" stop-color="#22d3ee" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-card-date">July 20, 2026</span>
+            <h3>Why most GTM pivots fail in the first 90 days</h3>
+            <p>Pivoting the messaging without pivoting the ICP is the most common mistake we see — and the 90-day framework that catches it before it's expensive.</p>
+          </div>
+        </a>
+
+        <a href="blog-skipping-diagnose.html" class="blog-card">
+          <div class="blog-card-image">
+            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract scan rings illustration">
+              <rect width="400" height="250" fill="var(--bg-alt)" />
+              <circle cx="190" cy="125" r="28" fill="none" stroke="var(--border)" stroke-width="2" />
+              <circle cx="190" cy="125" r="52" fill="none" stroke="var(--border)" stroke-width="2" />
+              <circle cx="190" cy="125" r="76" fill="none" stroke="var(--border)" stroke-width="2" />
+              <line x1="190" y1="125" x2="190" y2="49" stroke="url(#gradDiagnose)" stroke-width="3" stroke-linecap="round" />
+              <circle cx="190" cy="125" r="6" fill="url(#gradDiagnose)" />
+              <circle cx="233" cy="97" r="7" fill="url(#gradDiagnose)" />
+              <defs>
+                <linearGradient id="gradDiagnose" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#7c6bff" />
+                  <stop offset="100%" stop-color="#22d3ee" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-card-date">July 6, 2026</span>
+            <h3>The real cost of skipping the diagnose step</h3>
+            <p>Founders often ask for a roadmap when the actual problem hasn't been named yet. Solving the wrong problem well is still the wrong problem.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <span class="eyebrow-inline">Ready when you are</span>
+        <h2>Start a conversation</h2>
+        <p>A two-hour architecture review, a quarterly retainer, or embedded fractional leadership — tell us where you are and we'll suggest the shape.</p>
+        <a href="contact.html" class="btn btn-primary">Start a conversation &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGradF" x1="0%" y1="0%" x2="100%" y2="60%">
+              <stop offset="0%" stop-color="#7c6bff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+            <mask id="logoCutF">
+              <rect width="100" height="100" fill="#ffffff" />
+              <polygon points="50,16 14,86 86,86" fill="#000000" />
+              <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+            </mask>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="url(#logoGradF)" mask="url(#logoCutF)" />
+        </svg>
+          Alturatech
+        </a>
+        <p class="footer-tagline">Product, AI, GTM, and growth — with a dedicated engineering team available for hands-on execution.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 18px;">Start a conversation &rarr;</a>
+      </div>
+      <div class="footer-col">
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="advisory.html">Advisory</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:alturatechai@gmail.com">alturatechai@gmail.com</a></li>
+          <li><p>Hyderabad, India (IST) &middot; Response 1&ndash;2 business days</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Alturatech. Built with intent, in Hyderabad.</div>
+      <div>Product &middot; AI &middot; GTM &middot; Growth</div>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

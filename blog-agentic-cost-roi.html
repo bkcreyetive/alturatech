@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Why your agent's token bill doesn't match your ROI story &middot; Alturatech</title>
+<meta name="description" content="Token consumption doesn't scale the way a pilot demo suggests, and most clients have no way to translate a token count into what they're actually paying for. Here's how to fix both." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<script src="theme.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradH" x1="0%" y1="0%" x2="100%" y2="60%">
+            <stop offset="0%" stop-color="#7c6bff" />
+            <stop offset="100%" stop-color="#22d3ee" />
+          </linearGradient>
+          <mask id="logoCutH">
+            <rect width="100" height="100" fill="#ffffff" />
+            <polygon points="50,16 14,86 86,86" fill="#000000" />
+            <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+          </mask>
+        </defs>
+        <circle cx="50" cy="50" r="48" fill="url(#logoGradH)" mask="url(#logoCutH)" />
+      </svg>
+      Alturatech
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="advisory.html">Advisory</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li class="mobile-cta"><a href="contact.html" class="nav-cta">Start a conversation &rarr;</a></li>
+      <li class="nav-mobile-footer">
+        <a href="mailto:alturatechai@gmail.com">alturatechai@gmail.com</a><br />
+        Hyderabad, India (IST)
+      </li>
+    </ul>
+    <div class="nav-right">
+      <div class="theme-switch">
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle color theme" aria-haspopup="true" aria-expanded="false">
+          <span class="theme-icon" aria-hidden="true">&#127769;</span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu">
+          <button type="button" class="theme-menu-item" data-theme-choice="light" role="menuitem">&#9728;&#65039; Light</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="dark" role="menuitem">&#127769; Dark</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="system" role="menuitem">&#128421;&#65039; System</button>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary nav-start-btn">Start a conversation <span aria-hidden="true">&rarr;</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom: 24px;">
+    <div class="article-wrap">
+      <a href="blog.html" class="back-link">&larr; Back to blog</a>
+      <h1 style="font-size: clamp(1.8rem, 4vw, 2.4rem); text-align: left;">Why your agent's token bill doesn't match your ROI story</h1>
+      <div class="article-meta" style="text-align: left;">August 10, 2026 &middot; Alturatech</div>
+      <div class="article-hero-image">
+        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract cost bars exceeding a baseline illustration">
+          <rect width="400" height="250" fill="var(--bg-alt)" />
+          <line x1="40" y1="190" x2="360" y2="190" stroke="var(--border)" stroke-width="1" />
+          <line x1="40" y1="150" x2="360" y2="150" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="4 6" />
+          <rect x="60" y="165" width="24" height="25" rx="3" fill="var(--text-faint)" />
+          <rect x="105" y="140" width="24" height="50" rx="3" fill="var(--text-faint)" />
+          <rect x="150" y="110" width="24" height="80" rx="3" fill="url(#gradCostHero)" />
+          <rect x="195" y="90" width="24" height="100" rx="3" fill="url(#gradCostHero)" />
+          <rect x="240" y="60" width="24" height="130" rx="3" fill="url(#gradCostHero)" />
+          <rect x="285" y="75" width="24" height="115" rx="3" fill="url(#gradCostHero)" />
+          <circle cx="252" cy="55" r="7" fill="url(#gradCostHero)" />
+          <defs>
+            <linearGradient id="gradCostHero" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#22d3ee" />
+              <stop offset="100%" stop-color="#7c6bff" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="article-wrap article-body">
+      <p>Most ROI conversations about agentic AI happen at the wrong altitude. Someone promises a cost reduction number in a kickoff call, and a few months later the actual invoice from the model provider is a token count nobody on the buying side can translate into anything meaningful. That gap — between the value story and the bill — is where agentic projects quietly get expensive, usually well before anyone notices there's a problem to fix.</p>
+
+      <h2>Why token consumption doesn't scale the way people expect</h2>
+      <p>A single-shot LLM call has predictable cost: input tokens plus output tokens, one exchange. An agentic loop is a different animal. The model reasons across multiple steps, calls tools, evaluates what comes back, and sometimes retries when a tool call fails or returns something it didn't expect — and in most implementations, the entire prior reasoning trace gets re-sent as context on every subsequent step. Cost compounds with the length of the loop, not with the size of the final answer. A workflow that should take three steps can quietly take eleven once it hits an edge case and starts self-correcting, and every one of those extra steps re-transmits a growing context window.</p>
+      <p>The failure mode we see most often: a pilot gets priced against the happy path — the three or four steps a clean example takes — and production traffic includes enough messy inputs that the real average cost per run lands at three or four times the pilot estimate. Nobody lied in the pilot. Nobody instrumented for the edge cases either.</p>
+
+      <h2>Translating token cost into something a client can actually evaluate</h2>
+      <p>Clients don't want to know that a workflow used 40,000 tokens. They want to know what that meant in dollars, set against whatever it replaced. That requires converting raw token spend into unit economics tied to the actual outcome — cost per resolved ticket, cost per qualified lead, cost per completed workflow — not cost per API call. Getting there means instrumenting the system to attribute spend to a specific outcome as it happens, not reading a single aggregate number off a monthly invoice after the fact.</p>
+      <p>It also means comparing against the real alternative cost — what a person doing the same task costs, fully loaded, not the headline salary number. That comparison sounds obvious and is rarely done rigorously, because it requires two cost models that were never built to speak the same unit — compute spend and labor cost — to actually be reconciled against the same outcome.</p>
+
+      <h2>What we tell clients before they commit</h2>
+      <p>Set a cost ceiling per task before anything gets built, not after the first invoice arrives — decide what a resolved case is allowed to cost, and design the retry and escalation logic around that ceiling rather than around what's technically elegant. Instrument cost tracking at the level of an individual workflow run, not just aggregate monthly spend, because a number that only shows up once a month can't tell you which specific case types are driving it. And treat a rising average cost-per-outcome as a signal to investigate — an escalating edge-case rate, a retry loop that isn't converging — rather than just a line item to budget around next quarter.</p>
+
+      <p>The ROI case for agentic AI is real often enough to be worth building for. It only holds up, though, if someone is actually measuring cost against outcome at the level of a single workflow run rather than the monthly bill. Most teams find out the ratio was off only when finance asks a question nobody built the instrumentation to answer.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <span class="eyebrow-inline">Ready when you are</span>
+        <h2>Start a conversation</h2>
+        <p>A two-hour architecture review, a quarterly retainer, or embedded fractional leadership — tell us where you are and we'll suggest the shape.</p>
+        <a href="contact.html" class="btn btn-primary">Start a conversation &rarr;</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGradF" x1="0%" y1="0%" x2="100%" y2="60%">
+              <stop offset="0%" stop-color="#7c6bff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+            <mask id="logoCutF">
+              <rect width="100" height="100" fill="#ffffff" />
+              <polygon points="50,16 14,86 86,86" fill="#000000" />
+              <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+            </mask>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="url(#logoGradF)" mask="url(#logoCutF)" />
+        </svg>
+          Alturatech
+        </a>
+        <p class="footer-tagline">Product, AI, GTM, and growth — with a dedicated engineering team available for hands-on execution.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 18px;">Start a conversation &rarr;</a>
+      </div>
+      <div class="footer-col">
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="advisory.html">Advisory</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:alturatechai@gmail.com">alturatechai@gmail.com</a></li>
+          <li><p>Hyderabad, India (IST) &middot; Response 1&ndash;2 business days</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Alturatech. Built with intent, in Hyderabad.</div>
+      <div>Product &middot; AI &middot; GTM &middot; Growth</div>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
