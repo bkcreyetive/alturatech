@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Build vs. buy: the question most AI roadmaps answer too early &middot; Alturatech</title>
+<meta name="description" content="Teams reach for 'build vs. buy' before they've named what they actually need the system to do. The order that question gets asked in decides how expensive the wrong answer is." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<script src="theme.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradH" x1="0%" y1="0%" x2="100%" y2="60%">
+            <stop offset="0%" stop-color="#7c6bff" />
+            <stop offset="100%" stop-color="#22d3ee" />
+          </linearGradient>
+          <mask id="logoCutH">
+            <rect width="100" height="100" fill="#ffffff" />
+            <polygon points="50,16 14,86 86,86" fill="#000000" />
+            <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+          </mask>
+        </defs>
+        <circle cx="50" cy="50" r="48" fill="url(#logoGradH)" mask="url(#logoCutH)" />
+      </svg>
+      Alturatech
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="advisory.html">Advisory</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li class="mobile-cta"><a href="contact.html" class="nav-cta">Start a conversation &rarr;</a></li>
+      <li class="nav-mobile-footer">
+        <a href="mailto:hello@alturatech.ai">hello@alturatech.ai</a><br />
+        Hyderabad, India (IST)
+      </li>
+    </ul>
+    <div class="nav-right">
+      <div class="theme-switch">
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle color theme" aria-haspopup="true" aria-expanded="false">
+          <span class="theme-icon" aria-hidden="true">&#127769;</span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu">
+          <button type="button" class="theme-menu-item" data-theme-choice="light" role="menuitem">&#9728;&#65039; Light</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="dark" role="menuitem">&#127769; Dark</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="system" role="menuitem">&#128421;&#65039; System</button>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary nav-start-btn">Start a conversation <span aria-hidden="true">&rarr;</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom: 24px;">
+    <div class="article-wrap">
+      <a href="blog.html" class="back-link">&larr; Back to blog</a>
+      <h1 style="font-size: clamp(1.8rem, 4vw, 2.4rem); text-align: left;">Build vs. buy: the question most AI roadmaps answer too early</h1>
+      <div class="article-meta" style="text-align: left;">September 7, 2026 &middot; Alturatech</div>
+      <div class="article-hero-image">
+        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract balance scale illustration">
+          <rect width="400" height="250" fill="var(--bg-alt)" />
+          <line x1="200" y1="55" x2="200" y2="195" stroke="var(--border)" stroke-width="3" />
+          <line x1="90" y1="95" x2="310" y2="95" stroke="var(--border)" stroke-width="2.5" />
+          <path d="M90,95 L65,150 A30,20 0 0 0 115,150 Z" fill="none" stroke="var(--text-faint)" stroke-width="2" />
+          <path d="M310,95 L285,150 A30,20 0 0 0 335,150 Z" fill="none" stroke="url(#gradBuild)" stroke-width="2.5" />
+          <circle cx="200" cy="55" r="8" fill="url(#gradBuild)" />
+          <rect x="185" y="195" width="30" height="14" rx="3" fill="var(--text-faint)" />
+          <defs>
+            <linearGradient id="gradBuild" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7c6bff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="article-wrap article-body">
+      <p>Almost every AI roadmap conversation eventually reaches "should we build this or buy it," and almost every team asks that question before they can actually answer it. Build vs. buy isn't a first question — it's the question you get to ask once you already know precisely what the system needs to do, how it needs to fail, and what happens when it's wrong. Skip that groundwork and the build-vs-buy debate becomes a proxy fight about cost and speed, which is exactly the wrong basis for the decision.</p>
+
+      <h2>The question underneath the question</h2>
+      <p>"Build or buy" is really asking: whose job is it to own the failure modes? A vendor's off-the-shelf agent for support triage, lead scoring, or document extraction comes with someone else's assumptions baked in — about what counts as a good answer, how aggressively to escalate uncertainty, what data it's allowed to see. Buying is fastest when those assumptions already match how your business handles edge cases. It gets expensive fast when they don't, because you end up building a layer of workarounds on top of the vendor's product to compensate — at which point you're paying for both the license and the engineering effort, with neither team fully accountable for the outcome.</p>
+      <p>Building gives you full control over those failure modes, at the cost of owning every one of them yourself: the retry logic, the escalation thresholds, the monitoring, the slow accumulation of edge cases nobody scoped for in month one. Teams that build without budgeting for that ongoing ownership are usually the ones back in this conversation eight months later, asking why the "fast, cheap" build is neither.</p>
+
+      <h2>What has to be true before the question is answerable</h2>
+      <p>Before build vs. buy is a real decision rather than a guess, you need three things nailed down: what specific outcome the system is accountable for, what a wrong answer costs when it happens, and how much of your differentiation actually lives in this workflow versus somewhere else in the product. A lead-scoring model sitting on top of standard CRM data is rarely where a company's edge lives — buying is usually right there. An agent making judgment calls that directly shape a customer's experience of what makes you different is a different calculus entirely, and one worth the cost of owning.</p>
+      <p>Most roadmaps skip straight to vendor comparisons or build estimates without ever writing down the answer to those three questions. The comparison ends up being decided on price and demo quality, which are the two variables least correlated with which option will actually hold up in production.</p>
+
+      <h2>How we sequence it with clients</h2>
+      <p>We ask for the failure-cost answer before we'll run a build-vs-buy comparison at all — if nobody can say what a wrong output costs the business, the comparison isn't ready to happen yet, no matter how much pressure there is to move. Once that's answered, we treat "buy" as the default and require a specific reason to override it: differentiation that genuinely lives in the workflow, a control requirement no vendor meets, or a cost curve that inverts at your actual volume. Absent one of those three, building is usually a roadmap decision made for the wrong reasons — because building feels like progress, and buying feels like admitting the problem wasn't as hard as it looked.</p>
+      <p>The teams that get this right aren't the ones with the strongest opinion on build vs. buy going in. They're the ones who were willing to answer the harder question first.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <span class="eyebrow-inline">Ready when you are</span>
+        <h2>Start a conversation</h2>
+        <p>A two-hour architecture review, a quarterly retainer, or embedded fractional leadership — tell us where you are and we'll suggest the shape.</p>
+        <a href="contact.html" class="btn btn-primary">Start a conversation &rarr;</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <svg class="brand-mark" viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGradF" x1="0%" y1="0%" x2="100%" y2="60%">
+              <stop offset="0%" stop-color="#7c6bff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+            <mask id="logoCutF">
+              <rect width="100" height="100" fill="#ffffff" />
+              <polygon points="50,16 14,86 86,86" fill="#000000" />
+              <polygon points="50,34 41,58 59,58" fill="#ffffff" />
+            </mask>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="url(#logoGradF)" mask="url(#logoCutF)" />
+        </svg>
+          Alturatech
+        </a>
+        <p class="footer-tagline">Product, AI, GTM, and growth — with engineering support available for hands-on execution.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 18px;">Start a conversation &rarr;</a>
+      </div>
+      <div class="footer-col">
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="advisory.html">Advisory</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:hello@alturatech.ai">hello@alturatech.ai</a></li>
+          <li><p>Hyderabad, India (IST) &middot; Response 1&ndash;2 business days</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Alturatech. Built with intent, in Hyderabad.</div>
+      <div>Product &middot; AI &middot; GTM &middot; Growth</div>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
