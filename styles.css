@@ -430,6 +430,25 @@ h2 {
   margin-bottom: 20px;
 }
 
+.logo-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.logo-mark img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
 .card h3 {
   font-size: 1.15rem;
   margin: 0 0 10px;
