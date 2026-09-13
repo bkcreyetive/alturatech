@@ -449,6 +449,20 @@ h2 {
   object-fit: contain;
 }
 
+.diagram-image-wrap {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.diagram-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .card h3 {
   font-size: 1.15rem;
   margin: 0 0 10px;
