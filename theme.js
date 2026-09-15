@@ -28,11 +28,11 @@
     }
   }
 
-  var currentMode = localStorage.getItem(KEY) || "light";
+  var currentMode = localStorage.getItem(KEY) || "dark";
   applyMode(currentMode);
 
   media.addEventListener("change", function () {
-    if ((localStorage.getItem(KEY) || "light") === "system") {
+    if ((localStorage.getItem(KEY) || "dark") === "system") {
       applyMode("system");
     }
   });
@@ -42,7 +42,7 @@
     var menu = document.getElementById("themeMenu");
     if (!btn || !menu) return;
 
-    applyMode(localStorage.getItem(KEY) || "light");
+    applyMode(localStorage.getItem(KEY) || "dark");
 
     btn.addEventListener("click", function (e) {
       e.stopPropagation();
