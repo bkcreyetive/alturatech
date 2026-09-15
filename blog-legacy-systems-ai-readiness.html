@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What a global logistics rebuild teaches you about AI readiness &middot; Alturatech</title>
+<meta name="description" content="AI readiness conversations focus on model selection while the actual blocker sits underneath — in the legacy systems nobody wants to touch. Lessons from rebuilding one at scale." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<script src="theme.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="images/logo-mark.png" alt="Alturatech" width="37" height="26" />
+      Alturatech
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="advisory.html">Advisory</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li class="mobile-cta"><a href="contact.html" class="nav-cta">Start a conversation &rarr;</a></li>
+      <li class="nav-mobile-footer">
+        <a href="mailto:hello@alturatech.ai">hello@alturatech.ai</a><br />
+        Hyderabad, Bengaluru &amp; Seattle
+      </li>
+    </ul>
+    <div class="nav-right">
+      <div class="theme-switch">
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle color theme" aria-haspopup="true" aria-expanded="false">
+          <span class="theme-icon" aria-hidden="true">&#127769;</span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu">
+          <button type="button" class="theme-menu-item" data-theme-choice="light" role="menuitem">&#9728;&#65039; Light</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="dark" role="menuitem">&#127769; Dark</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="system" role="menuitem">&#128421;&#65039; System</button>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary nav-start-btn">Start a conversation <span aria-hidden="true">&rarr;</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom: 24px;">
+    <div class="article-wrap">
+      <a href="blog.html" class="back-link">&larr; Back to blog</a>
+      <h1 style="font-size: clamp(1.8rem, 4vw, 2.4rem); text-align: left;">What a global logistics rebuild teaches you about AI readiness</h1>
+      <div class="article-meta" style="text-align: left;">September 15, 2026 &middot; Alturatech</div>
+      <div class="article-hero-image">
+        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract layered pipeline illustration">
+          <rect width="400" height="250" fill="var(--bg-alt)" />
+          <rect x="40" y="70" width="150" height="26" rx="6" fill="none" stroke="var(--border)" stroke-width="2" />
+          <rect x="40" y="112" width="150" height="26" rx="6" fill="none" stroke="var(--border)" stroke-width="2" />
+          <rect x="40" y="154" width="150" height="26" rx="6" fill="none" stroke="var(--border)" stroke-width="2" />
+          <path d="M190,83 C230,83 220,60 270,60" stroke="var(--text-faint)" stroke-width="2" fill="none" />
+          <path d="M190,125 C240,125 250,125 300,125" stroke="url(#gradLegacyHero)" stroke-width="3" fill="none" />
+          <path d="M190,167 C230,167 220,190 270,190" stroke="var(--text-faint)" stroke-width="2" fill="none" />
+          <rect x="270" y="47" width="90" height="26" rx="6" fill="none" stroke="var(--text-faint)" stroke-width="2" />
+          <rect x="300" y="112" width="60" height="26" rx="6" fill="url(#gradLegacyHero)" opacity="0.15" stroke="url(#gradLegacyHero)" stroke-width="2.5" />
+          <rect x="270" y="177" width="90" height="26" rx="6" fill="none" stroke="var(--text-faint)" stroke-width="2" />
+          <circle cx="330" cy="125" r="6" fill="url(#gradLegacyHero)" />
+          <defs>
+            <linearGradient id="gradLegacyHero" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7c6bff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="article-wrap article-body">
+      <p>Most AI readiness conversations start in the wrong place. A team wants to know which model to use, which vendor to evaluate, how fast a pilot can ship — and none of that matters if the system underneath is a decade of undocumented exception-handling bolted onto a database nobody fully understands anymore. The unglamorous work of modernizing that system is usually the actual project. The AI feature is what gets announced; the plumbing is what determines whether it works.</p>
+
+      <h2>The rebuild that doesn't look like a rebuild</h2>
+      <p>Years ago, leading a global reverse-logistics rebuild on Azure at Microsoft, the hardest part was never the target architecture — it was that the existing system had to keep running, correctly, in every region, for the entire duration of the migration. You can't take a returns-and-repairs pipeline offline while you rebuild it; product keeps flowing back from customers on day one of the project and every day after. The approach that worked was running old and new in parallel, region by region, with the legacy system as the source of truth until the new one had earned trust on real volume — not projected volume, not a staging environment, actual returns moving through actual warehouses.</p>
+      <p>That pattern generalizes past logistics. Any legacy system serious enough to be load-bearing for a business can't be modernized by replacing it in one motion. It gets modernized by shrinking its blast radius one workflow at a time, proving the new path on the least risky slice first, and being honest about how long "least risky" takes to actually validate.</p>
+
+      <h2>What breaks first when you point AI at a legacy system</h2>
+      <p>The failure mode teams don't anticipate is that a legacy system's data was never structured to answer the questions an AI feature needs answered. The business logic that matters — why an exception was routed a certain way, why a threshold got overridden for one customer segment and not another — usually lives in a person's judgment or a hardcoded rule from five reorgs ago, not in a field you can query. Point a model at that data and it will confidently reproduce whatever pattern is there, including the undocumented workarounds nobody meant to encode as policy.</p>
+      <p>Event completeness is the other quiet killer. A legacy system built for batch processing often has gaps in what it captured at the time something happened versus what it captured after the fact, once someone corrected a record. An AI feature built on top inherits every one of those gaps without any signal that they exist, because the data still looks complete — it just isn't accurate about when things actually occurred.</p>
+
+      <h2>Sequencing modernization against AI ambition</h2>
+      <p>The instinct on both ends is wrong. Waiting for full modernization before touching AI means the project never starts, because a system this size is never fully done. Bolting AI directly onto ungoverned legacy data means shipping something that looks impressive in a demo and degrades the moment it meets a case the training data didn't represent. The workable middle is identifying which subsystems already have clean, complete, well-understood data today, and starting there — treating that boundary as the actual scope of the first AI initiative, not the whole legacy estate.</p>
+      <p>That's a smaller, less exciting starting point than most roadmaps want to commit to. It's also the difference between an AI feature that holds up in production and one that works until it meets the first case nobody scoped for. The modernization work and the AI work aren't sequential phases of the same project — they're the same problem, examined from two different angles, and the teams that treat them as separate initiatives are usually the ones who find out the hard way which one was actually gating the other.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <span class="eyebrow-inline">Ready when you are</span>
+        <h2>Start a conversation</h2>
+        <p>A two-hour architecture review, a quarterly retainer, or embedded fractional leadership — tell us where you are and we'll suggest the shape.</p>
+        <a href="contact.html" class="btn btn-primary">Start a conversation &rarr;</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img class="brand-mark" src="images/logo-mark.png" alt="Alturatech" width="37" height="26" />
+          Alturatech
+        </a>
+        <p class="footer-tagline">Product, AI, GTM, and growth — with engineering support available for hands-on execution.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 18px;">Start a conversation &rarr;</a>
+      </div>
+      <div class="footer-col">
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="advisory.html">Advisory</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:hello@alturatech.ai">hello@alturatech.ai</a></li>
+          <li>Hyderabad, Bengaluru &amp; Seattle</li>
+          <li>Response 1&ndash;2 business days</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Alturatech. Built with intent, across Hyderabad, Bengaluru &amp; Seattle.</div>
+      <div>Product &middot; AI &middot; GTM &middot; Growth</div>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
