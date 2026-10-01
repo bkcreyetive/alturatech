@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Platform product strategy means naming your builder, not your user &middot; Alturatech</title>
+<meta name="description" content="A platform roadmap has two customers, not one. Most teams never write down who the second one is, and the roadmap quietly optimizes for the customer who complains loudest." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<script src="theme.js"></script>
+  <script defer data-domain="alturatech.ai" src="https://plausible.io/js/script.tagged-events.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="images/logo-mark.png" alt="Alturatech" width="37" height="26" />
+      Alturatech
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="advisory.html">Advisory</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li class="mobile-cta"><a href="contact.html" class="nav-cta plausible-event-name=CTA+Click">Start a conversation &rarr;</a></li>
+      <li class="nav-mobile-footer">
+        <a href="mailto:hello@alturatech.ai" class="plausible-event-name=Email+Click">hello@alturatech.ai</a><br />
+        Hyderabad, Bengaluru &amp; Seattle
+      </li>
+    </ul>
+    <div class="nav-right">
+      <div class="theme-switch">
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle color theme" aria-haspopup="true" aria-expanded="false">
+          <span class="theme-icon" aria-hidden="true">&#127769;</span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu">
+          <button type="button" class="theme-menu-item" data-theme-choice="light" role="menuitem">&#9728;&#65039; Light</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="dark" role="menuitem">&#127769; Dark</button>
+          <button type="button" class="theme-menu-item" data-theme-choice="system" role="menuitem">&#128421;&#65039; System</button>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary nav-start-btn plausible-event-name=CTA+Click">Start a conversation <span aria-hidden="true">&rarr;</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom: 24px;">
+    <div class="article-wrap">
+      <a href="blog.html" class="back-link">&larr; Back to blog</a>
+      <h1 style="font-size: clamp(1.8rem, 4vw, 2.4rem); text-align: left;">Platform product strategy means naming your builder, not your user</h1>
+      <div class="article-meta" style="text-align: left;">October 1, 2026 &middot; Alturatech</div>
+      <div class="article-hero-image">
+        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract platform base supporting modular blocks illustration">
+          <rect width="400" height="250" fill="var(--bg-alt)" />
+          <rect x="60" y="175" width="280" height="30" rx="8" fill="url(#gradPlatformHero)" opacity="0.15" stroke="url(#gradPlatformHero)" stroke-width="2.5" />
+          <line x1="110" y1="175" x2="110" y2="110" stroke="var(--text-faint)" stroke-width="2" />
+          <line x1="180" y1="175" x2="180" y2="75" stroke="url(#gradPlatformHero)" stroke-width="3" />
+          <line x1="250" y1="175" x2="250" y2="95" stroke="var(--text-faint)" stroke-width="2" />
+          <line x1="310" y1="175" x2="310" y2="130" stroke="var(--text-faint)" stroke-width="2" />
+          <rect x="85" y="85" width="50" height="26" rx="6" fill="none" stroke="var(--text-faint)" stroke-width="2" />
+          <rect x="152" y="48" width="56" height="28" rx="6" fill="url(#gradPlatformHero)" opacity="0.18" stroke="url(#gradPlatformHero)" stroke-width="2.5" />
+          <rect x="222" y="68" width="56" height="28" rx="6" fill="none" stroke="var(--text-faint)" stroke-width="2" />
+          <rect x="284" y="102" width="52" height="28" rx="6" fill="none" stroke="var(--text-faint)" stroke-width="2" />
+          <defs>
+            <linearGradient id="gradPlatformHero" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7c6bff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="article-wrap article-body">
+      <p>Every product team eventually describes something it's building as a platform. Most of the time what they mean is a feature with an API bolted on — a product with exactly one customer, the end user, that now happens to expose some endpoints. That distinction isn't semantic. A real platform has two customers in the same roadmap at the same time, and the moment a team stops being able to name the second one, the roadmap quietly starts optimizing for the first one only, and the platform claim stops being true.</p>
+
+      <h2>What actually makes something a platform</h2>
+      <p>A platform business succeeds or fails on whether the people building on top of it succeed first. Having led Power Pages, Microsoft's low-code platform for business application builders, and before that having worked on Alexa Smart Home, where the entire product surface depends on device makers integrating well, the pattern was the same in both: the end user's experience was never something the platform team built directly. It was an outcome of whether the builder — the maker, the third-party developer, the device manufacturer — had primitives reliable enough to build on without having to work around them.</p>
+      <p>That's the test worth applying before calling anything a platform: can you name the builder who is not your end user, and can you say what that builder needs that is different from what your end user needs? If the honest answer is "we don't really have builders, we have an API nobody outside the company uses," the roadmap should be run like a product roadmap, not a platform one. There's no shame in that — most companies don't need to be platforms. The shame is running a single-customer roadmap while telling the board and the market a two-customer story.</p>
+
+      <h2>Where platform roadmaps quietly break</h2>
+      <p>The failure mode shows up in prioritization meetings, not in architecture diagrams. A platform team sits in the same roadmap review as every other product team, and the review is instrumented for end-user metrics — engagement, conversion, satisfaction scores. A builder-facing investment — a more predictable API contract, better error messages, documentation that doesn't assume tribal knowledge — rarely shows up as a line that moves an end-user dashboard this quarter. It shows up two quarters later, as the difference between five builders shipping on your platform and zero. Because that lag is real, builder-facing work loses almost every prioritization fight that's scored on short-cycle metrics, and the team that owns it ends up explaining, every quarter, why the "platform work" isn't visible yet.</p>
+      <p>The teams that get this right instrument builder health as its own line, with its own metrics — time to first successful integration, support ticket volume per builder, API error rates that builders hit versus ones your own team hits internally — and they protect budget for it the same way they'd protect budget for a committed end-user feature, rather than treating it as the thing that gets cut when the quarter gets tight.</p>
+
+      <h2>The org design question underneath it</h2>
+      <p>None of this works without someone whose job is explicitly to represent the builder in the room where tradeoffs get made. Without that owner, the builder's interests get represented informally, by whoever happens to remember them, and informal representation loses to whoever has a dashboard and a deadline. Platform product leadership is, in practice, the job of keeping two customers — one visible in the metrics everyone already watches, one visible only if someone is deliberately watching for it — both alive in the same roadmap, long enough for the second one to compound into the thing that made the platform claim true in the first place.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <span class="eyebrow-inline">Ready when you are</span>
+        <h2>Start a conversation</h2>
+        <p>A two-hour architecture review, a quarterly retainer, or embedded fractional leadership — tell us where you are and we'll suggest the shape.</p>
+        <a href="contact.html" class="btn btn-primary plausible-event-name=CTA+Click">Start a conversation &rarr;</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img class="brand-mark" src="images/logo-mark.png" alt="Alturatech" width="37" height="26" />
+          Alturatech
+        </a>
+        <p class="footer-tagline">Product, AI, GTM, and growth — with engineering support available for hands-on execution.</p>
+        <a href="contact.html" class="btn btn-primary plausible-event-name=CTA+Click" style="margin-top: 18px;">Start a conversation &rarr;</a>
+      </div>
+      <div class="footer-col">
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="advisory.html">Advisory</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:hello@alturatech.ai" class="plausible-event-name=Email+Click">hello@alturatech.ai</a></li>
+          <li>Hyderabad, Bengaluru &amp; Seattle</li>
+          <li>Response 1&ndash;2 business days</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Alturatech. Built with intent, across Hyderabad, Bengaluru &amp; Seattle.</div>
+      <div>Product &middot; AI &middot; GTM &middot; Growth</div>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
